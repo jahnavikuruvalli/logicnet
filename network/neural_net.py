@@ -224,7 +224,7 @@ class NeuralNetwork:
         (rounds the sigmoid output to the nearest integer)
         """
         output = self.forward(x)
-        return int(np.round(float(output)))
+        return int(np.round(float(output.flatten()[0])))
 
     def reset(self):
         """Re-randomize all weights — start training from scratch."""
